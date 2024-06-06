@@ -10,4 +10,9 @@ export default defineNuxtConfig({
           apiBase: envSettings.API_BASE
       }
   },
+  app: {
+    head: {
+      title: envSettings.SITE_TITLE,
+    },
+  },
 })
