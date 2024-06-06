@@ -1,10 +1,13 @@
+const environment = process.env.APP_ENV;
+const envSettings = require(`./env.${environment}.js`); 
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
   runtimeConfig: {
       // Public keys that are exposed to the client
       public: {
-          apiBase: 'https://sample-service-site.g.kuroco.app'
+          apiBase: envSettings.API_BASE
       }
   },
 })
