@@ -10,7 +10,7 @@
         <section>
             <h2>WORKS</h2>
             <ul>
-                <li v-for="n in response.details.ext_col_04" :key="n.slag" class="works__item">
+                <li v-for="(n, i) in response.details.ext_col_04" :key="i" class="works__item">
                     <img :src="n.ext_col_04.url" />
                     <div class="works__item__text">
                         <h3>{{ n.ext_col_05 }}</h3>

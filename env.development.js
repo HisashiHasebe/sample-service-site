@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   API_BASE: 'https://sample-service-site.g.kuroco.app',
   SITE_TITLE: '[開発]|Kurocoサンプルサイト',
   META_TITLE: '[開発]|Kurocoサンプルサイト',
