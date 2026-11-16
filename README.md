@@ -1,75 +1,35 @@
-# Nuxt 3 Minimal Starter
+# sample-service-site
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Kurocoビギナーズガイド](https://kuroco.app/ja/docs/tutorials/beginners-guide/) のサンプルサイトです（Nuxt 4 / SPA・静的生成）。
 
-## Setup
+## 動作環境
 
-Make sure to install the dependencies:
+- Node.js `^22.22.3 || ^24.15.0 || >=26.0.0`（Nuxt 4 の要件）
+
+## セットアップ
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## 開発サーバー
 
-Start the development server on `http://localhost:3000`:
+`APP_ENV` で読み込む設定ファイル（`env.<APP_ENV>.js`）を切り替えます。未指定の場合は `development` になります。
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# http://localhost:3000
 ```
 
-## Production
-
-Build the application for production:
+## 静的生成
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+APP_ENV=production npm run generate
+# 出力先: .output/public
 ```
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| APP_ENV | 設定ファイル | GitHub Actions |
+| --- | --- | --- |
+| development | `env.development.js` | `.github/workflows/develop.yml` |
+| staging | `env.staging.js` | `.github/workflows/staging.yml` |
+| production | `env.production.js` | `.github/workflows/build.yml` |
